@@ -1,0 +1,23 @@
+﻿@model Task1.Models.UserModel
+
+@{
+    ViewData["Title"] = "SinUp";
+}
+
+<form asp-action="UserRegistration" asp-controller="User" method="post">
+
+    <label>Username</label>
+    <input type="text" asp-for="UserName" required><br>
+
+    <label>Pasword</label>
+    <input type="text" asp-for="Password" required><br>
+
+    <label>You are admin?</label>
+    <input type="checkbox" asp-for="IsAdmin"><br>
+
+    <button>Sign up</button>
+    <p style="color: red">@ViewData["ErrorMessage"]</p>
+
+</form>
+
+
