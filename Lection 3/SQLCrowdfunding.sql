@@ -330,13 +330,44 @@ BEGIN
 
 	END TRY
 	BEGIN CATCH
-
-	ROLLBACK TRANSACTION;
-
+		
+		RETURN
 		DECLARE @ErrorMessage NVARCHAR(MAX) = '';
 		SET @ErrorMessage = ERROR_MESSAGE();
 
 		PRINT 'Information failed: ' + @ErrorMessage;
+		RETURN
+
+	END CATCH
+END
+GO
+
+
+CREATE PROCEDURE PaginetedProject
+	@PageNumber INT,
+	@PageSize INT = 5,
+	@StartDate DATE,
+	@EndDate DATE
+AS
+BEGIN
+	SET NOCOUNT ON
+	BEGIN TRY
+		
+		SELECT Name, CategoryId FROM Project AS P
+		WHERE (@StartDate IS NULL OR P.CreationDate >= @StartDate)
+			AND	(@EndDate IS NULL OR P.CreationDate <= @EndDate)
+		ORDER BY CreationDate DESC
+		OFFSET (@PageNumber - 1) * @PageSize ROWS
+		FETCH NEXT @PageSize ROWS ONLY
+	
+	END TRY
+	BEGIN CATCH
+		
+		DECLARE @ErrorMessage NVARCHAR(MAX) = '';
+		SET @ErrorMessage = ERROR_MESSAGE();
+
+		PRINT 'Paginaction failed: ' + @ErrorMessage;
+		RETURN
 
 	END CATCH
 END
