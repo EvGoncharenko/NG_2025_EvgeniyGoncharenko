@@ -1,0 +1,123 @@
+.div_footer_content{
+    background-image: url("/Template/content/section_5.png");
+    background-size: cover;
+
+    width: 1300px;
+    height: 600px;
+    margin: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.div_footer_content_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 650px;
+    height: 600px;
+}
+
+.div_footer_content p,
+.div_footer_content img{
+    color: white;
+    filter: brightness(0) invert(1);
+}
+
+.div_footer_logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+
+
+    top: 0;
+    left: 0;
+
+    width: 450px;
+    height: 100px;
+    margin: 50px;
+}
+
+#div_footer_logo_image{
+
+    width: 100px;
+    height: 100px;
+}
+
+#div_footer_logo_text{
+    font-size: 50px;
+    font-weight: bolder;
+    word-spacing: -20px;
+}
+
+#footer_copyright_notice{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    margin: 10px 10px 50px 50px;
+    font-size: 10px;
+}
+
+#footer_text{
+    margin: 50px;
+}
+
+.div_footer_content_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 650px;
+    height: 600px;
+}
+
+.div_footer_content_right_text p{
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.div_footer_content_right img{
+    width: 30px;
+    height: 30px;
+
+    vertical-align: middle;
+    display: inline;
+}
+
+.div_footer_social_media{
+    position: absolute;
+    margin: 10px 50px 50px 10px;
+
+    bottom: 0;
+    right: 0;
+}
+
+.div_footer_social_media button{
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+
+    &:hover{
+        transform: scale(1.5);
+    }
+}
+
+
+
+

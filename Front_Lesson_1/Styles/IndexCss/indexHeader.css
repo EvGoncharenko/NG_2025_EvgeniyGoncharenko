@@ -1,0 +1,110 @@
+.base_header {
+    background-image: url("/Template/content/title.png");
+    background-size: cover;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.base_header_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.base_logo_menu {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    padding: 25px;
+}
+
+.header_logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    #div_image_logo {
+        margin-right: 10px;
+
+        width: 45px;
+        height: 45px;
+
+        filter: invert(15%) sepia(100%) saturate(300%) hue-rotate(12deg);  }
+
+    #div_text_logo{
+
+        font-size: 26px;
+        font-weight: bold;
+        word-spacing: -10px;
+    }
+}
+
+.nav_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    #nav_menu_delivery{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        img{
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        p{
+            font-size: 12px;
+            word-spacing: -4px;
+            font-weight: bold;
+        }
+    }
+
+    #nav_menu_links{
+        display: flex;
+        a{
+            margin: 10px;
+            word-spacing: -7px;
+        }
+
+        a:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+.div_events{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+
+    #div_events_content:first-child{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 25px;
+        p:nth-child(1){
+            padding: 5px;
+            border: 2px dashed #3D180F;
+        }
+        p:nth-child(2){
+            line-height: 1;
+            font-family: Arial, serif;
+            font-size: 100px;
+            font-weight: 900;
+            text-shadow: 5px 5px wheat;
+        }
+    }
+
+    img{
+        width: 500px;
+    }
+}
+
+
+
